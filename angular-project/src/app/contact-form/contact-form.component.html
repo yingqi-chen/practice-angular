@@ -1,9 +1,10 @@
-<form>
+<form [formGroup]="form" >
     <div>
         <label for="name">Name</label>
             <input 
             type="text" 
             id="name"
+            formControlName="name"
             />
     </div>
 
@@ -12,14 +13,16 @@
             <input 
             type="text" 
             id="phone"
+            formControlName="phone"
             />
     </div>
 
     <div>
-        <label for="email">email</label>
+        <label for="email">Email</label>
             <input 
             type="text" 
             id="email"
+            formControlName="email"
             />
     </div>
 
