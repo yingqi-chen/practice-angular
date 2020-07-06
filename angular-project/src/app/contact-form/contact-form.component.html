@@ -6,7 +6,10 @@
             id="name"
             formControlName="name"
             />
-        <div *ngIf="form.get('name').invalid">something wrong</div>
+        <div *ngIf="name.touched && name.invalid" >
+            <div *ngIf="name.errors.required">The name field cannot be empty.</div>
+            <div *ngIf="name.errors.minlength">The name requires {{ name.errors.minlength.requiredLength }} letters or above.</div>
+        </div>
     </div>
 
     <div>
