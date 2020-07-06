@@ -28,6 +28,10 @@
             id="email"
             formControlName="email"
             />
+            <div *ngIf="email.touched && email.invalid" >
+                <div *ngIf="email.errors.required">The email field cannot be empty.</div>
+                <div *ngIf="email.errors.email">The email you input is not valid.</div>
+            </div>
     </div>
 
     <button>Submit</button>

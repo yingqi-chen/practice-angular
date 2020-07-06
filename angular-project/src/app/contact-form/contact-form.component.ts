@@ -19,7 +19,10 @@ export class ContactFormComponent implements OnInit {
       Validators.minLength(3)
     ]),
     phone: new FormControl('', Validators.required),
-    email: new FormControl('', Validators.required)
+    email: new FormControl('', [
+      Validators.required,
+      Validators.email
+    ])
   })
 
   get name(){
@@ -33,5 +36,7 @@ export class ContactFormComponent implements OnInit {
   get email(){
     return this.form.get('email')
   }
+
+  log(x){console.log(x)}
 
 }
