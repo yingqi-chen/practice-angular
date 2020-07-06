@@ -6,6 +6,7 @@
             id="name"
             formControlName="name"
             />
+        <div *ngIf="form.get('name').invalid">something wrong</div>
     </div>
 
     <div>
